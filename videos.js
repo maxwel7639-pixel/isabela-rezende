@@ -19,7 +19,7 @@ const isPublicStorageUrl = value => {
 for (const entry of videos) {
   if (!entry.title || !entry.poster || !isPublicStorageUrl(entry.src)) continue;
   const card = document.createElement('figure');
-  card.className = 'video-card';
+  card.className = 'video-card glow';
   const player = document.createElement('video');
   player.controls = true;
   player.preload = 'none';
