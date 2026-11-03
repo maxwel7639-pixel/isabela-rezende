@@ -58,14 +58,19 @@ if (!reduced && finePointer) {
   });
 }
 
-// Pilha de cards: o topo de cada card depende da altura da tela, para o card nunca ficar cortado
+// Pilha de cards: o topo de cada card depende da altura da tela, para o card nunca ficar cortado.
+// No celular o card é mais alto que a tela: o topo fica negativo e ele gruda pela base.
 const stackCards = [...document.querySelectorAll('.stack .service')];
+let lastW = 0, lastH = 0;
 const placeStack = () => {
-  const on = matchMedia('(min-width: 900px)').matches;
+  const small = innerWidth < 900;
   stackCards.forEach((c, i) => {
-    c.style.top = on ? Math.max(84, Math.min(92 + i * 22, innerHeight - c.offsetHeight - 16)) + 'px' : '';
+    const fit = innerHeight - c.offsetHeight - 16;
+    c.style.top = (small ? Math.min(84 + i * 8, fit) : Math.max(84, Math.min(92 + i * 22, fit))) + 'px';
   });
+  lastW = innerWidth; lastH = innerHeight;
 };
 placeStack();
-addEventListener('resize', placeStack);
+// a barra de endereço do celular muda a altura ao rolar: só recalcula em mudança grande
+addEventListener('resize', () => { if (innerWidth !== lastW || Math.abs(innerHeight - lastH) > 150) placeStack(); });
 addEventListener('load', placeStack);
