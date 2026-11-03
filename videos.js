@@ -1,6 +1,10 @@
 // Only client-owned, approved videos belong here. Never insert third-party testimonials.
 // Public Storage URLs are not credentials. Keep service keys out of this repository.
-const videos = [];
+const videos = [
+  { title: 'Gabriela', src: 'https://ydbzqpkwfxybrdmadckm.supabase.co/storage/v1/object/public/videos-isabela/DRdR3LiDVD_.mp4', poster: 'https://ydbzqpkwfxybrdmadckm.supabase.co/storage/v1/object/public/videos-isabela/DRdR3LiDVD_-poster.webp' },
+  { title: 'Iasmim', src: 'https://ydbzqpkwfxybrdmadckm.supabase.co/storage/v1/object/public/videos-isabela/DQ7oodrj3k0.mp4', poster: 'https://ydbzqpkwfxybrdmadckm.supabase.co/storage/v1/object/public/videos-isabela/DQ7oodrj3k0-poster.webp' },
+  { title: 'Rafaela', src: 'https://ydbzqpkwfxybrdmadckm.supabase.co/storage/v1/object/public/videos-isabela/DQoexbLjazm.mp4', poster: 'https://ydbzqpkwfxybrdmadckm.supabase.co/storage/v1/object/public/videos-isabela/DQoexbLjazm-poster.webp' },
+];
 
 const section = document.getElementById('videos');
 const list = document.getElementById('video-list');
