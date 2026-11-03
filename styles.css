@@ -100,3 +100,23 @@ background:radial-gradient(240px circle at var(--bx) var(--by),#8a4dff 0,#b58bff
 @media(prefers-reduced-motion:reduce){.video-card:hover,.duo-card:hover img,.service-photo:hover img{transform:none}}
 .stack{position:relative}
 @media(min-width:900px) and (max-height:760px){.service{padding:22px 34px;gap:36px;grid-template-columns:270px minmax(0,1fr)}.service.reverse{grid-template-columns:minmax(0,1fr) 270px}.service-text h3{font-size:34px;margin-bottom:10px}.service-text p{font-size:15px;line-height:1.6;margin-bottom:12px}.meta{margin-top:14px!important;padding-top:12px}.meta strong{font-size:22px}.service .button{min-height:42px;padding:10px 22px}}
+
+/* ===== v4: marcas d'água e laterais ===== */
+.watermark{position:absolute;left:50%;top:50%;translate:-50% -52%;z-index:0;max-width:none;font-family:var(--heading);font-style:italic;font-weight:500;font-size:clamp(76px,17vw,270px);line-height:1;letter-spacing:-.02em;white-space:nowrap;color:#7a45d826;pointer-events:none;user-select:none}
+.section-heading,.narrow,.radio-inner,.contact-inner{position:relative}
+.section-heading h2,.section-heading p,.narrow>h2,.contact-inner>h2{position:relative;z-index:1}
+.services,.videos,.about,.intro,.radiestesia,.contact{overflow-x:clip}
+.narrow>.watermark{top:0;translate:-50% -8%}
+.radiestesia .watermark,.contact .watermark{color:#ffffff12}
+.radio-inner>.watermark{top:50%;left:50%}
+.contact-inner>.watermark{top:34%}
+.radio-inner>div,.radio-photo{position:relative;z-index:1}
+.decor{position:relative}
+.decor:before,.decor:after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0;background-repeat:no-repeat}
+.decor:before{opacity:.2;background-image:url(assets/simbolo-escuro.svg),url(assets/simbolo-escuro.svg),url(assets/simbolo-escuro.svg),url(assets/simbolo-escuro.svg),url(assets/simbolo-escuro.svg);background-size:620px,540px,600px,500px,560px;background-position:left -330px top 6%,right -300px top 24%,left -280px top 50%,right -260px top 72%,left -300px top 96%}
+.decor:after{opacity:.55;background-image:url(assets/brilho.svg),url(assets/brilho.svg),url(assets/brilho.svg),url(assets/brilho.svg),url(assets/brilho.svg),url(assets/brilho.svg);background-size:26px,18px,30px,20px,24px,16px;background-position:left 7% top 12%,right 6% top 20%,left 11% top 46%,right 9% top 58%,left 5% top 80%,right 12% top 90%}
+.decor>*{position:relative;z-index:1}
+.intro.decor>.flower-bg,.about.decor>.flower-bg{position:absolute;z-index:0}
+@media(max-width:900px){.decor:before{opacity:.12}.decor:after{display:none}}
+@media(prefers-reduced-motion:no-preference){.decor:after{animation:twinkle 4s ease-in-out infinite}}
+.narrow>.watermark{color:#7a45d81a}
