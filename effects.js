@@ -40,6 +40,14 @@ if (!reduced && finePointer) {
       el.style.setProperty('--rx', '0deg'); el.style.setProperty('--ry', '0deg');
     });
   });
+  // Linha de borda roxa que acompanha o cursor
+  document.addEventListener('pointermove', ev => {
+    const card = ev.target.closest && ev.target.closest('.glow');
+    if (!card) return;
+    const r = card.getBoundingClientRect();
+    card.style.setProperty('--bx', (ev.clientX - r.left).toFixed(0) + 'px');
+    card.style.setProperty('--by', (ev.clientY - r.top).toFixed(0) + 'px');
+  });
   // Reflexo do vidro nos botões
   document.querySelectorAll('.button').forEach(b => {
     b.addEventListener('pointermove', ev => {
