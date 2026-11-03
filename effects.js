@@ -57,3 +57,15 @@ if (!reduced && finePointer) {
     });
   });
 }
+
+// Pilha de cards: o topo de cada card depende da altura da tela, para o card nunca ficar cortado
+const stackCards = [...document.querySelectorAll('.stack .service')];
+const placeStack = () => {
+  const on = matchMedia('(min-width: 900px)').matches;
+  stackCards.forEach((c, i) => {
+    c.style.top = on ? Math.max(84, Math.min(92 + i * 22, innerHeight - c.offsetHeight - 16)) + 'px' : '';
+  });
+};
+placeStack();
+addEventListener('resize', placeStack);
+addEventListener('load', placeStack);
