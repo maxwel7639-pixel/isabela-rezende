@@ -128,10 +128,10 @@ background:radial-gradient(240px circle at var(--bx) var(--by),#8a4dff 0,#b58bff
 .hero-inner{max-width:760px}
 .portrait-frame{width:clamp(270px,74vw,370px)}
 .portrait{height:clamp(350px,96vw,480px)}
-.hero h1{display:flex;flex-direction:column;align-items:center;font-size:clamp(72px,16vw,168px);line-height:.88;letter-spacing:-.03em;margin:6px 0 18px}
-.hero h1 .h1-second{font-style:italic;color:#e1cbff;font-weight:500}
-.hero-profession{margin-top:6px}
-@media(max-width:420px){.hero h1{font-size:68px}}
 .radiestesia>.wm-static{left:auto;top:auto}
 .intro .flower-bg,.about .flower-bg{display:none}
 .radiestesia>.wm-static{margin-bottom:.12em;line-height:.8}
+
+/* ===== v6: nome grande como marca d'água no fundo do hero ===== */
+.hero-mark{position:absolute;inset:0;z-index:0;display:flex;flex-direction:column;justify-content:center;gap:0;padding:0 3vw;font-family:var(--heading);font-style:italic;font-weight:500;font-size:clamp(100px,27vw,360px);line-height:.82;letter-spacing:-.025em;white-space:nowrap;color:#e1cbff17;pointer-events:none;user-select:none}
+.hero-mark span:nth-child(2){align-self:flex-end}
