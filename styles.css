@@ -120,3 +120,18 @@ background:radial-gradient(240px circle at var(--bx) var(--by),#8a4dff 0,#b58bff
 @media(max-width:900px){.decor:before{opacity:.12}.decor:after{display:none}}
 @media(prefers-reduced-motion:no-preference){.decor:after{animation:twinkle 4s ease-in-out infinite}}
 .narrow>.watermark{color:#7a45d81a}
+
+/* ===== v5: marcas d'água fora do texto e hero maior ===== */
+.wm-static,.narrow>.watermark,.contact-inner>.watermark{position:static;translate:none;display:block;width:100%;text-align:center;margin:0 auto -.36em;font-size:clamp(72px,13vw,190px)}
+.radiestesia>.wm-static{position:relative;z-index:0;margin-bottom:-.4em;padding-top:0}
+.radiestesia>.wm-static+.container{position:relative;z-index:1}
+.hero-inner{max-width:760px}
+.portrait-frame{width:clamp(270px,74vw,370px)}
+.portrait{height:clamp(350px,96vw,480px)}
+.hero h1{display:flex;flex-direction:column;align-items:center;font-size:clamp(72px,16vw,168px);line-height:.88;letter-spacing:-.03em;margin:6px 0 18px}
+.hero h1 .h1-second{font-style:italic;color:#e1cbff;font-weight:500}
+.hero-profession{margin-top:6px}
+@media(max-width:420px){.hero h1{font-size:68px}}
+.radiestesia>.wm-static{left:auto;top:auto}
+.intro .flower-bg,.about .flower-bg{display:none}
+.radiestesia>.wm-static{margin-bottom:.12em;line-height:.8}
