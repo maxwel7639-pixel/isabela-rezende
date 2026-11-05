@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://isabela-rezende.vercel.app/sitemap.xml
+Sitemap: https://isabelarezendeterapeuta.com.br/sitemap.xml
