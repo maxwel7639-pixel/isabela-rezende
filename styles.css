@@ -144,3 +144,7 @@ background:radial-gradient(240px circle at var(--bx) var(--by),#8a4dff 0,#b58bff
 .price em{font-size:13px;font-style:normal;color:#64436d}
 .price>span{display:block;font-size:14px;color:#64436d}.price>span strong{font-size:24px}
 .meta{border-top:0!important;padding-top:0!important;margin:14px 0 14px!important}
+
+/* ===== v8: endereco ===== */
+.address{margin:26px auto 0;color:#e5d8f2;font-size:15px;line-height:1.7}
+.address+.instagram-link{margin-top:6px}
